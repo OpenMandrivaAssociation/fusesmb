@@ -12,7 +12,6 @@ Source:		http://www.ricardis.tudelft.nl/~vincent/fusesmb/download/%{name}-%{vers
 License:	GPL
 Summary:	Browse your network neighbourhood as if it were on your own filesystem
 Group:		Networking/Other
-BuildRoot:	%{_tmppath}/%{name}-root
 %description
 With SMB for Fuse you can seamlessly browse your network neighbourhood
 as if it were on your own filesystem.
