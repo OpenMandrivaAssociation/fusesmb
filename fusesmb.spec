@@ -9,7 +9,7 @@ URL:		http://www.ricardis.tudelft.nl/~vincent/fusesmb/
 BuildRequires:	libsmbclient-devel, fuse-devel, samba-client
 Requires:	libsmbclient, fuse, samba-client
 Source:		http://www.ricardis.tudelft.nl/~vincent/fusesmb/download/%{name}-%{version}.tar.gz
-License:	GPL
+License:	GPLv2+
 Summary:	Browse your network neighbourhood as if it were on your own filesystem
 Group:		Networking/Other
 BuildRoot:	%{_tmppath}/%{name}-root
@@ -25,11 +25,12 @@ you're accessing a share a connection is made to the remote computer.
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
-%makeinstall
+rm -fr %buildroot
+%makeinstall_std
 
 %clean
 %{__rm} -Rf %{buildroot}
