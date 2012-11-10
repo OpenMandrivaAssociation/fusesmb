@@ -1,0 +1,34 @@
+--- fusesmb.c.str	2010-02-02 15:12:54.000000000 +0100
++++ fusesmb.c	2010-02-02 15:13:23.000000000 +0100
+@@ -1019,12 +1019,12 @@
+     {
+         if (errno != ENOENT)
+         {
+-            fprintf(stderr, strerror(errno));
++            fprintf(stderr, "%s", strerror(errno));
+             exit(EXIT_FAILURE);
+         }
+         if (-1 == mkdir(cache_path, 0777))
+         {
+-            fprintf(stderr, strerror(errno));
++            fprintf(stderr, "%s", strerror(errno));
+             exit(EXIT_FAILURE);
+        }
+     }
+@@ -1040,14 +1040,14 @@
+     {
+         if (errno != ENOENT)
+         {
+-            fprintf(stderr, strerror(errno));
++            fprintf(stderr, "%s", strerror(errno));
+             exit(EXIT_FAILURE);
+         }
+         int fd;
+         /* Create configfile with read-write permissions for the owner */
+         if (-1 == (fd = open(configfile, O_WRONLY | O_CREAT, 00600)))
+         {
+-            fprintf(stderr, strerror(errno));
++            fprintf(stderr, "%s", strerror(errno));
+             exit(EXIT_FAILURE);
+         }
+         close(fd);
