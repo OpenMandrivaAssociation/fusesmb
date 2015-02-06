@@ -1,6 +1,6 @@
 %define name		fusesmb
 %define version		0.8.7
-%define release		%mkrel 3
+%define release		4
 
 Name:		%name
 Version:	%version
