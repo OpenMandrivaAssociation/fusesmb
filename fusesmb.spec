@@ -5,7 +5,7 @@
 Name:		%name
 Version:	%version
 Release:	%release
-URL:		http://www.ricardis.tudelft.nl/~vincent/fusesmb/
+URL:		https://www.ricardis.tudelft.nl/~vincent/fusesmb/
 BuildRequires:	libsmbclient-devel, fuse-devel, samba-client
 Requires:	libsmbclient, fuse, samba-client
 Source:		http://www.ricardis.tudelft.nl/~vincent/fusesmb/download/%{name}-%{version}.tar.gz
